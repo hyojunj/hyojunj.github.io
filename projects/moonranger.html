@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MoonRanger Rover Chassis · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>MoonRanger Rover Chassis</h1>
+    <p class="lede">A 24 lb carbon fiber chassis for an autonomous lunar rover, packed into a suitcase-sized footprint.</p>
+    <p class="ext"><a class="label" href="https://labs.ri.cmu.edu/moonranger/" target="_blank" rel="noopener">MoonRanger mission site &nearr;</a></p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2021</dd></div>
+      <div><dt class="label">Where</dt><dd>CMU · MoonRanger team</dd></div>
+      <div><dt class="label">Tools</dt><dd>SolidWorks · ANSYS</dd></div>
+      <div><dt class="label">Key figure</dt><dd>24 lb chassis</dd></div>
+    </dl>
+
+    <figure class="case-hero"><img class="plot" src="https://labs.ri.cmu.edu/moonranger/wp-content/uploads/sites/24/2021/10/rover-1-edge-cleaned.png" alt="MoonRanger rover with its solar panel open"><figcaption class="label">Image: Carnegie Mellon University Robotics Institute</figcaption></figure>
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>MoonRanger is a suitcase-sized autonomous microrover from Carnegie Mellon's Robotics Institute, built to search for ice near the Moon's pole by measuring hydrogen along its route. With no radio link to Earth, it has to sense terrain, navigate and map on its own. I was on the chassis team, which designed its carbon fiber chassis to stay light and stiff through launch and the extreme temperature swings on the lunar surface.</p>
+      <figure>
+        <div class="ph">Add image · 4:3</div>
+        <figcaption class="label">Fig. 1 · Caption</figcaption>
+      </figure>
+      <h2>Design</h2>
+      <p>Carbon fiber gave the chassis a high stiffness-to-weight ratio while handling extreme thermal expansion. The finished chassis came in at 24 lb.</p>
+      <h2>Packaging</h2>
+      <p>Every electronic component and sensor had to fit in a suitcase-sized volume. I built 3D models of the internal hardware and iterated the CAD layout until fit and clearance worked.</p>
+      <figure>
+        <div class="ph">Add image · 4:3</div>
+        <figcaption class="label">Fig. 2 · Caption</figcaption>
+      </figure>
+      <h2>Validation</h2>
+      <p>I ran more than 20 stress simulations in ANSYS and SolidWorks covering launch vibration and lunar terrain loads to confirm the structure would survive.</p>
+    </article>
+
+    <a class="next" href="diamondlife-products.html">
+      <span class="label">Next project</span>
+      <strong>DiamondLife Product Design &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>

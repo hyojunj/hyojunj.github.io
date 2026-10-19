@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Airlock Linkage Mechanism · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>Airlock Linkage Mechanism</h1>
+    <p class="lede">A laser-cut acrylic linkage that turns a motor's rotation into the push needed to open a habitat airlock.</p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2020</dd></div>
+      <div><dt class="label">Where</dt><dd>CMU · Design I (24-370)</dd></div>
+      <div><dt class="label">Tools</dt><dd>SolidWorks · Motion study · FEA</dd></div>
+      <div><dt class="label">Key figure</dt><dd>FOS 2 on the crank link</dd></div>
+    </dl>
+
+
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>For CMU's Design I course, my partner and I designed a linkage that converts a motor's rotation into a stroke long enough to press the button that opens a habitat airlock. The links were laser cut from 3/16 inch acrylic and mounted on a standard test rig.</p>
+      <figure class="plot">
+        <div><video src="../images/linkage-motion.mp4" poster="../images/linkage-motion-poster.jpg" autoplay muted loop playsinline aria-label="SolidWorks motion study of the three-bar slotted linkage moving on the test rig"></video></div>
+        <figcaption class="label">Fig. 1 · Motion study of the linkage on the test rig in SolidWorks</figcaption>
+      </figure>
+      <h2>Concepts</h2>
+      <p>We sketched six linkage layouts and chose three with slots, since slots made it easier to meet the geometry limits. Of those, we picked the design with the highest vertical reach, 9.5 inches.</p>
+      <figure class="pair pair plot">
+        <div><img src="../images/linkage-sketch.jpg" alt="Hand sketch of a slotted linkage concept drawn over the test rig" loading="lazy"><img src="../images/linkage-calc.jpg" alt="Hand calculations for axial, shear and buckling stress in the links" loading="lazy"></div>
+        <figcaption class="label">Fig. 2 · Early concepts sketched on the rig, and hand calculations for link stresses</figcaption>
+      </figure>
+      <h2>Analysis</h2>
+      <p>Hand calculations with a factor of safety of 2 showed the shortest link would fail first and set its maximum width at about 0.73 inches. An FEA study of the worst-case position, with the crank at full extension, agreed with the hand calculations.</p>
+      <h2>Next steps</h2>
+      <p>We used the motion study to plan improvements to slot size, slot placement and the fixed link length for a smoother, more stable motion.</p>
+    </article>
+
+    <a class="next" href="ligastek-sensor.html">
+      <span class="label">Next project</span>
+      <strong>Factory Sensor Module &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>

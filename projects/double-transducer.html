@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pressure-to-Motion Double Transducer · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>Pressure-to-Motion Double Transducer</h1>
+    <p class="lede">An Arduino machine that turns how hard you press into light, then turns that light into a servo angle.</p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2021</dd></div>
+      <div><dt class="label">Where</dt><dd>CMU · Intro to Physical Computing (60-223)</dd></div>
+      <div><dt class="label">Tools</dt><dd>Arduino · C++ · Soldering</dd></div>
+      <div><dt class="label">Key figure</dt><dd>Pressure → light → angle</dd></div>
+    </dl>
+
+
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>For a spring 2021 physical computing class, my partner and I built a double transducer. This machine senses how hard a force sensor is pressed and turns that into an amount of light. A light sensor reads the light and turns it into an angle for a servo motor. An LCD shows the values at each step.</p>
+      <figure class="pair pair plot">
+        <div><img src="../images/transducer-sketch.jpg" alt="Hand sketch of pressure sensor, color LED, color sensor and servo" loading="lazy"><img src="../images/transducer-schematic.jpg" alt="Wiring schematic with force sensor, photoresistor, servo and LED" loading="lazy"></div>
+        <figcaption class="label">Fig. 1 · First concept sketch, when color was the middle step, and the final wiring schematic</figcaption>
+      </figure>
+      <h2>Build</h2>
+      <p>We started with a breadboard prototype, added a potentiometer to adjust the LCD brightness, and finished on a soldered protoboard.</p>
+      <figure class="pair pair photo">
+        <div><img src="../images/transducer-build.jpg" alt="Breadboard build with LCD screen and LEDs" loading="lazy"><img src="../images/transducer-board.jpg" alt="Soldered protoboard on top of the Arduino" loading="lazy"></div>
+        <figcaption class="label">Fig. 2 · Breadboard prototype with LCD readout, and the final soldered board</figcaption>
+      </figure>
+      <h2>Challenges</h2>
+      <p>The hardest part was writing mapping functions so each stage used the full range of the next. We first tried color as the middle step, but converting pressure to RGB and back was unreliable, so we switched to light intensity. We also found that the Arduino servo library disables PWM on pins 9 and 10, which explained why our LEDs wouldn't light.</p>
+    </article>
+
+    <a class="next" href="airlock-linkage.html">
+      <span class="label">Next project</span>
+      <strong>Airlock Linkage Mechanism &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>

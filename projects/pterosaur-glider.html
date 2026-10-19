@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pterosaur-Inspired Glider · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>Pterosaur-Inspired Glider</h1>
+    <p class="lede">Adaptive wing mechanisms modeled on pterosaur flight, designed for dynamic flight stabilization.</p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2026–now</dd></div>
+      <div><dt class="label">Where</dt><dd>CMU Robomechanics Lab</dd></div>
+      <div><dt class="label">Tools</dt><dd>SolidWorks · XFLR5 · Isaac Lab</dd></div>
+      <div><dt class="label">Key figure</dt><dd>Fixed and retractable wings</dd></div>
+    </dl>
+
+    <figure class="case-hero"><div class="ph wide">Add hero photo · 16:9</div></figure>
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>Graduate research at the CMU Robomechanics Lab on gliders with fixed and retractable wings inspired by pterosaurs. The goal is a wing mechanism that can adapt in flight to stabilize the glider.</p>
+      <figure>
+        <div class="ph">Add image · 4:3</div>
+        <figcaption class="label">Fig. 1 · Caption</figcaption>
+      </figure>
+      <h2>Mechanism design</h2>
+      <p>I designed the adaptive wing mechanisms in SolidWorks and prototyped them with 3D printing and machining. The onboard electronics had to fit inside the glider body within a fixed mass budget.</p>
+      <h2>Aerodynamics</h2>
+      <p>I am analyzing pterosaur-inspired wing sections in XFOIL, XFLR5 and AVL, with CFD validation, to estimate the loads the retraction mechanism has to carry. Glider tests are planned to validate and refine the design.</p>
+      <figure>
+        <div class="ph">Add image · 4:3</div>
+        <figcaption class="label">Fig. 2 · Caption</figcaption>
+      </figure>
+      <h2>Learning-based control</h2>
+      <p>In parallel I am building physics simulations in Isaac Lab and applying reinforcement learning to wing control policies, with aerodynamic constraints built into the simulation.</p>
+    </article>
+
+    <a class="next" href="steering-wheel-armature.html">
+      <span class="label">Next project</span>
+      <strong>Universal Steering Wheel Armature &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>

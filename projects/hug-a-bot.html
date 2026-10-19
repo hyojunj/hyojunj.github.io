@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hug-a-Bot · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>Hug-a-Bot</h1>
+    <p class="lede">A huggable penguin robot that sends and receives hugs between loved ones during times of isolation.</p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2020</dd></div>
+      <div><dt class="label">Where</dt><dd>CMU · Human-Robot Interaction (16-467)</dd></div>
+      <div><dt class="label">Tools</dt><dd>3D printing · Servos · User study · ANOVA</dd></div>
+      <div><dt class="label">Key figure</dt><dd>4-condition pilot study</dd></div>
+    </dl>
+
+
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>During the COVID-19 stay-at-home orders in spring 2020, many people went weeks without physical contact. Our team of five designed Hug-a-Bot, a socially assistive robot that gives hugs. It lets you send and receive hugs from loved ones through a companion app, and it can check your body temperature. The project grew out of an earlier replication study on human-robot proxemics, which looked at how a robot's eye gaze changes how close people are willing to get.</p>
+      <h2>Design</h2>
+      <p>Research shows animal-like robots are seen as more likable for social tasks, and they avoid the uncanny valley that human-like robots can fall into. We chose a penguin because its long fins make a natural hugging motion and its round body works as a soft cushion. The design has a screen and camera for a face, so it can make eye contact, and a heat-transmitting belly to make hugs feel warmer. For the prototype, we fit two 3D-printed arms driven by servos into a penguin plush so it could lift its fins to invite a hug.</p>
+      <figure class="pair pair plot">
+        <div><img src="../images/hugabot-hug.png" alt="Sketch of a person hugging the penguin robot" loading="lazy"><img src="../images/hugabot-front.png" alt="Front view of the penguin robot, 20 inches wide" loading="lazy"></div>
+        <figcaption class="label">Fig. 1 · Penguin concept with a screen and camera face and a heat-transmitting belly, and how a hug works</figcaption>
+      </figure>
+      <figure class="pair pair plot">
+        <div><img src="../images/hugabot-side.png" alt="Side view of the penguin robot with dimensions" loading="lazy"><img src="../images/hugabot-conditions.png" alt="Four penguin poses showing gaze and arm motion conditions" loading="lazy"></div>
+        <figcaption class="label">Fig. 2 · Side view (18 in tall, 15 in deep), and the four study conditions: no motion or open arms, with and without mutual gaze</figcaption>
+      </figure>
+      <h2>Study design</h2>
+      <p>We designed a between-subjects experiment with 50 participants to test how two nonverbal cues affect whether people respond to a hug request: mutual gaze and an open-arms gesture. Each participant would play a continuous task, the Chrome dinosaur game, in a room set up like a bedroom. After a while, their phone would show "You have received a hug!" and the robot would act out one of four conditions. We measured how quickly people hugged the robot, whether they hugged it at all, and survey ratings for comfort, noticeability and huggability. We planned to analyze the results with ANOVA and check the survey's consistency with Cronbach's alpha.</p>
+      <figure class="plot">
+        <div><img src="../images/hugabot-layouts.png" alt="Two bedroom floor plans showing where the robot and participant sit" loading="lazy"></div>
+        <figcaption class="label">Fig. 3 · Proposed lab layouts mimicking a bedroom: robot near the participant (A) and across the room (B)</figcaption>
+      </figure>
+      <h2>Pilot study</h2>
+      <p>We ran a pilot on a couch with the plush prototype. Whenever the robot moved its arms, participants rated it higher on huggability and noticeability, and every rating below 5 came from a no-motion condition. Participants also found the robot friendlier when it faced them. The condition with no motion and no gaze scored lowest. One limitation was that the servos hummed the whole time, which made the robot more noticeable than intended.</p>
+      <figure class="pair pair plot">
+        <div><img src="../images/hugabot-comfort.png" alt="Bar chart of comfort ratings, all 4 or 5" loading="lazy"><img src="../images/hugabot-notice.png" alt="Bar chart of noticeability ratings, mostly 5" loading="lazy"></div>
+        <figcaption class="label">Fig. 4 · Pilot survey results: comfort and noticeability (1 to 5)</figcaption>
+      </figure>
+      <figure class="plot">
+        <div><img src="../images/hugabot-huggability.png" alt="Bar chart showing most participants rated huggability 5 out of 5" loading="lazy"></div>
+        <figcaption class="label">Fig. 5 · Pilot survey results: how likely participants were to hug the robot (1 to 5)</figcaption>
+      </figure>
+      <h2>Next steps</h2>
+      <p>A companion app would sync the phone notification with the robot's motion, which was hard to time by text message in the pilot, and let users send hugs to each other. Future work would add heat sensing and warmth across the body, wireless pairing between robots, and quieter actuators.</p>
+      <figure class="pair pair plot">
+        <div><img src="../images/hugabot-app-friends.png" alt="App screen listing huggable friends" loading="lazy"><img src="../images/hugabot-app-hug.png" alt="App screen showing a hug request with accept and decline buttons" loading="lazy"></div>
+        <figcaption class="label">Fig. 6 · Wireframes of the companion app: a list of huggable friends, and an incoming hug request</figcaption>
+      </figure>
+    </article>
+
+    <a class="next" href="mousetrap-car.html">
+      <span class="label">Next project</span>
+      <strong>Mousetrap Ramp Climber &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>

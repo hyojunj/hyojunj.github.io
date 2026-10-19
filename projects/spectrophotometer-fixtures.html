@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spectrophotometer Robot Fixtures · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>Spectrophotometer Robot Fixtures</h1>
+    <p class="lede">Custom fixtures that integrate a spectrophotometer with a chemical-handling robot.</p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2022</dd></div>
+      <div><dt class="label">Where</dt><dd>CMU Jayan Lab</dd></div>
+      <div><dt class="label">Tools</dt><dd>SolidWorks · 3D printing · Laser cutting</dd></div>
+      <div><dt class="label">Key figure</dt><dd>Automated UV-Vis</dd></div>
+    </dl>
+
+    <figure class="case-hero"><img class="" src="../images/jayan-overview.jpg" alt="Vial carousel of laser-cut acrylic plates inside an aluminum frame, with a black 3D-printed T-bracket above it"></figure>
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>In the Jayan Lab at Carnegie Mellon I worked on connecting a commercial spectrophotometer to a chemical-handling robot, so samples could be measured as part of an automated workflow.</p>
+      <figure class="pair photo">
+        <div><img src="../images/jayan-top.jpg" alt="Top view of the vial carousel with the bracket over the measurement position" loading="lazy"><img src="../images/jayan-side.jpg" alt="Side view of the bracket and camera module above the vial plate" loading="lazy"></div>
+        <figcaption class="label">Fig. 1 · Left: top view of the vial carousel · Right: side view</figcaption>
+      </figure>
+      <h2>Fixture design</h2>
+      <p>I designed custom fixtures in SolidWorks and fabricated them with 3D printing and laser cutting to fit the spectrophotometer hardware into the robot's setup.</p>
+      <h2>Integration</h2>
+      <p>I assembled the spectrophotometer system to obtain UV-Vis spectra, then troubleshot the hardware and software issues that came up during integration.</p>
+    </article>
+
+    <a class="next" href="moonranger.html">
+      <span class="label">Next project</span>
+      <strong>MoonRanger Rover Chassis &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>

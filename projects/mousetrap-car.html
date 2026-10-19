@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mousetrap Ramp Climber · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>Mousetrap Ramp Climber</h1>
+    <p class="lede">A laser-cut, four-wheel-drive mousetrap car designed to climb as high up a ramp as possible.</p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2018</dd></div>
+      <div><dt class="label">Where</dt><dd>CMU · Fundamentals of ME (24-101)</dd></div>
+      <div><dt class="label">Tools</dt><dd>Laser cutting · Lathe · Hand calcs</dd></div>
+      <div><dt class="label">Key figure</dt><dd>82% energy efficiency</dd></div>
+    </dl>
+
+
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>In my first mechanical engineering course, our team of three built a car powered only by a mousetrap spring. The goal was to climb as high as possible up a ramp, so every design choice aimed to keep the car light and stop the wheels from slipping.</p>
+      <figure class="photo">
+        <div><img src="../images/mousetrap-final.jpg" alt="Final mousetrap car with four white foam wheels on carpet" loading="lazy"></div>
+        <figcaption class="label">Fig. 1 · Nessy II.V, the final version, with lathe-cut foam wheels</figcaption>
+      </figure>
+      <h2>First prototype</h2>
+      <p>Nessy I had a balsa body and was driven by a string wound around the rear axle. The trap's snap lifted one side of the car and made it veer, so it couldn't climb the ramp reliably.</p>
+      <figure class="photo">
+        <div><img src="../images/mousetrap-proto.jpg" alt="First prototype with a balsa body and foam wheels" loading="lazy"></div>
+        <figcaption class="label">Fig. 2 · Nessy I, the first prototype</figcaption>
+      </figure>
+      <h2>Final design</h2>
+      <p>Nessy II was laser cut from birch with a honeycomb center plate to save weight. A timing belt linked both axles for four-wheel drive, which spread the power, stopped wheel slip and fixed the steering problem. We turned foam wheels on a lathe, and a snap-fit acrylic clip held the trap with no adhesives. It took six laser-cut versions to get the fit right.</p>
+      <figure class="pair pair plot">
+        <div><img src="../images/mousetrap-top.png" alt="Side view drawing showing the timing belt linking both axles" loading="lazy"><img src="../images/mousetrap-front.png" alt="Drawing of the honeycomb center plate" loading="lazy"></div>
+        <figcaption class="label">Fig. 3 · Final design: side view with the belt-linked axles, and the honeycomb body</figcaption>
+      </figure>
+      <h2>Result</h2>
+      <p>On its best run, the car lifted its center of mass 0.56 m against a predicted 0.68 m, about 82% efficiency and 10% better than the first prototype.</p>
+    </article>
+
+    <a class="next" href="pterosaur-glider.html">
+      <span class="label">Next project</span>
+      <strong>Pterosaur-Inspired Glider &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Steering Modal Prediction · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>AI Steering Modal Prediction</h1>
+    <p class="lede">Machine learning models that predict steering wheel and column vibration from instrument panel design choices.</p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2026</dd></div>
+      <div><dt class="label">Where</dt><dd>General Motors</dd></div>
+      <div><dt class="label">Tools</dt><dd>PhysicsAI · OptiStruct · Python</dd></div>
+      <div><dt class="label">Key figure</dt><dd>25% less HPC demand</dd></div>
+    </dl>
+
+
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>How a steering wheel and column vibrate depends on the instrument panel structure behind them. With two colleagues I built an AI/ML tool in PhysicsAI that predicts steering wheel and column modal performance for trucks and cars, so risks show up before full-vehicle performance runs.</p>
+      <figure class="plot">
+        <div><img src="../images/ip-steering.png" alt="Finite element model of the instrument panel structure with steering wheel and column" loading="lazy"></div>
+        <figcaption class="label">Fig. 1 · Instrument panel structure with the steering wheel and column</figcaption>
+      </figure>
+      <h2>Parametric model</h2>
+      <p>We built a parametric instrument panel model with lumped masses standing in for the ducts, trim, airbag, infotainment, cluster and screens. The design levers were the beam architecture (magnesium, hybrid, single or split beam), the steering column type (power or manual) and the gauges of 42 structural brackets.</p>
+      <figure class="pair plot">
+        <div><img src="../images/ip-brackets-driver.png" alt="Driver-side instrument panel brackets around the cross-car beam" loading="lazy"><img src="../images/ip-brackets-center.png" alt="Center and passenger-side instrument panel brackets" loading="lazy"></div>
+        <figcaption class="label">Fig. 2 · Bracket gauges were among the 42 design variables</figcaption>
+      </figure>
+      <h2>Approach</h2>
+      <p>We trained the models on instrument panel modal analysis results, then used sensitivity analysis to rank how strongly each design lever moves the steering wheel and column modes and to explore the best design combinations early in the cycle.</p>
+      <h2>Result</h2>
+      <p>The tool cut HPC demand and manual effort by 25%, which allowed faster design iterations and earlier detection of risks in the development cycle.</p>
+    </article>
+
+    <a class="next" href="spectrophotometer-fixtures.html">
+      <span class="label">Next project</span>
+      <strong>Spectrophotometer Robot Fixtures &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>

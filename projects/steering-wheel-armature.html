@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Universal Steering Wheel Armature · Hyojun Jeong</title>
+<meta name="description" content="Hyojun Jeong, mechanical engineer. Projects in mechanism design, structural analysis and simulation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Hyojun Jeong</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="case">
+  <div class="wrap">
+    <a class="back label" href="../index.html#projects">&larr; All projects</a>
+    <h1>Universal Steering Wheel Armature</h1>
+    <p class="lede">One magnesium steering wheel armature designed to work across multiple vehicle platforms.</p>
+
+    <dl class="title-block">
+      <div><dt class="label">Date</dt><dd>2024–2026</dd></div>
+      <div><dt class="label">Where</dt><dd>General Motors</dd></div>
+      <div><dt class="label">Tools</dt><dd>LS-DYNA · OptiStruct · ANSA</dd></div>
+      <div><dt class="label">Key figure</dt><dd>1st mode above 120 Hz</dd></div>
+    </dl>
+
+
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>Alongside my main role supporting vehicle programs with interior simulations, I led the rapid development of a universal steering wheel armature at General Motors: a single cast magnesium core meant to be shared across vehicle platforms instead of designed per program.</p>
+      <figure class="plot">
+        <div><img src="../images/armature-bending.gif" alt="LS-DYNA animation of the steering wheel armature bending under a top load" loading="lazy"></div>
+        <figcaption class="label">Fig. 1 · Bending strength simulation at 12 o'clock in LS-DYNA</figcaption>
+      </figure>
+      <h2>Modal frequency</h2>
+      <p>With the column base fixed, I extracted the armature's natural frequencies and mode shapes. The first mode had to stay above 120 Hz to keep the wheel clear of vehicle vibration, and the design met the target in the vertical, lateral and rim modes.</p>
+      <h2>Rim bending strength</h2>
+      <p>I simulated pushing the rim 65 mm at the 12 o'clock position and at 6 o'clock on a 30° fixture, then checked stress and plastic strain against the material's fracture limits. Both load cases met the requirement with no fracture, and the results drove the design iterations.</p>
+      <h2>Test correlation</h2>
+      <p>As the interior CAE point of contact for two high-priority programs, I worked with suppliers to correlate the CAE models with physical test data and reviewed their test setups on site.</p>
+    </article>
+
+    <a class="next" href="steering-modal-ai.html">
+      <span class="label">Next project</span>
+      <strong>AI Steering Modal Prediction &rarr;</strong>
+    </a>
+  </div>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="label">Get in touch</p>
+      <p class="contact-line"><a class="select" href="mailto:hjjeong0310@gmail.com">hjjeong0310@gmail.com</a></p>
+    </div>
+    <div class="footer-row">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/hyojunj0310" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../resume.pdf" data-resume target="_blank" rel="noopener">Resume</a>
+      </div>
+      <span class="label">&copy; <span data-year>2026</span> Hyojun Jeong</span>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+</body>
+</html>
