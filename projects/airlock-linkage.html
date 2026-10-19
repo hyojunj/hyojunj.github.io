@@ -32,29 +32,35 @@
     <dl class="title-block">
       <div><dt class="label">Date</dt><dd>2020</dd></div>
       <div><dt class="label">Where</dt><dd>CMU · Design I (24-370)</dd></div>
-      <div><dt class="label">Tools</dt><dd>SolidWorks · Motion study · FEA</dd></div>
-      <div><dt class="label">Key figure</dt><dd>FOS 2 on the crank link</dd></div>
+      <div><dt class="label">Tools</dt><dd>SolidWorks · Motion study · FEA · Laser cutting</dd></div>
+      <div><dt class="label">Key figure</dt><dd>9.5 in vertical reach</dd></div>
     </dl>
 
 
 
     <article class="case-body">
       <h2>Overview</h2>
-      <p>For CMU's Design I course, my partner and I designed a linkage that converts a motor's rotation into a stroke long enough to press the button that opens a habitat airlock. The links were laser cut from 3/16 inch acrylic and mounted on a standard test rig.</p>
+      <p>For CMU's Design I course, my partner and I designed a linkage that converts a motor's rotation into a vertical stroke long enough to press the button that opens a habitat airlock. The links were laser cut from 3/16 inch acrylic and mounted on a standard aluminum test rig.</p>
       <figure class="plot">
         <div><video src="../images/linkage-motion.mp4" poster="../images/linkage-motion-poster.jpg" autoplay muted loop playsinline aria-label="SolidWorks motion study of the three-bar slotted linkage moving on the test rig"></video></div>
-        <figcaption class="label">Fig. 1 · Motion study of the linkage on the test rig in SolidWorks</figcaption>
+        <figcaption class="label">Fig. 1 · Motion study of the final linkage on the test rig in SolidWorks</figcaption>
       </figure>
       <h2>Concepts</h2>
-      <p>We sketched six linkage layouts and chose three with slots, since slots made it easier to meet the geometry limits. Of those, we picked the design with the highest vertical reach, 9.5 inches.</p>
+      <p>We sketched six linkage layouts and narrowed them to three that used slots, since slots made it easier to meet the rig's geometry limits. Their maximum vertical reach was 7.5, 8 and 9.5 inches. The first design let one link slide down its slot and lose stroke, so we chose the third: a 2 inch crank with 7.5 inch and 6 inch slotted links.</p>
       <figure class="pair pair plot">
         <div><img src="../images/linkage-sketch.jpg" alt="Hand sketch of a slotted linkage concept drawn over the test rig" loading="lazy"><img src="../images/linkage-calc.jpg" alt="Hand calculations for axial, shear and buckling stress in the links" loading="lazy"></div>
-        <figcaption class="label">Fig. 2 · Early concepts sketched on the rig, and hand calculations for link stresses</figcaption>
+        <figcaption class="label">Fig. 2 · Concepts sketched over the rig, and hand calculations for axial, shear, bending and buckling stress</figcaption>
       </figure>
-      <h2>Analysis</h2>
-      <p>Hand calculations with a factor of safety of 2 showed the shortest link would fail first and set its maximum width at about 0.73 inches. An FEA study of the worst-case position, with the crank at full extension, agreed with the hand calculations.</p>
-      <h2>Next steps</h2>
-      <p>We used the motion study to plan improvements to slot size, slot placement and the fixed link length for a smoother, more stable motion.</p>
+      <h2>Hand calculations</h2>
+      <p>We modeled each link as a two-force member and checked axial, shear, bending and buckling stress at the most loaded position. With 3/16 inch acrylic and a factor of safety of 2, the shortest link was the most likely to fail, which set its maximum width at about 0.73 inches.</p>
+      <h2>FEA</h2>
+      <p>In SolidWorks, I ran a static study with the crank at full extension, where a single link carries the highest load along its circular path. The FEA agreed with the hand calculations on both the critical position and the failure point at the crank link.</p>
+      <figure class="plot">
+        <div><img src="../images/linkage-fea.jpg" alt="Von Mises stress plot of the linkage at full extension, mostly low stress in blue" loading="lazy"></div>
+        <figcaption class="label">Fig. 3 · SolidWorks FEA of the worst-case position: peak von Mises stress of about 14.5 MPa</figcaption>
+      </figure>
+      <h2>Motion study</h2>
+      <p>A SolidWorks motion study let us choose a starting position that reduced oscillation during the run, and showed the button is pressed for about 5 to 10 percent of each rotation. We used it to plan improvements to slot size, slot placement and the fixed link length for a smoother motion.</p>
     </article>
 
     <a class="next" href="hug-a-bot.html">
