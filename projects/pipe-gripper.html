@@ -27,21 +27,21 @@
   <div class="wrap">
     <a class="back label" href="../index.html#projects">&larr; All projects</a>
     <h1>UMI-Style Gripper and Parallelogram Lift</h1>
-    <p class="lede">A 3D-printed, UMI-style rack-and-pinion gripper and parallelogram lift that lets a small robot car pick up a flanged pipe and stack it on another.</p>
+    <p class="lede">A competition robot for a three-day hackathon, with IR line following for the autonomous period and a 3D-printed, UMI-style gripper and lift for picking up and stacking pipes.</p>
     <p class="ext"><a class="label" href="https://github.com/BenGu0530/stag-beetle-gripper" target="_blank" rel="noopener">Project repository on GitHub &nearr;</a></p>
 
     <dl class="title-block">
       <div><dt class="label">Date</dt><dd>Nov 2026</dd></div>
       <div><dt class="label">Where</dt><dd>CMU Red Robot Hackathon</dd></div>
-      <div><dt class="label">Tools</dt><dd>CadQuery · MuJoCo · 3D printing · ESP32</dd></div>
-      <div><dt class="label">Key figure</dt><dd>92 mm lift · 83 g printed</dd></div>
+      <div><dt class="label">Tools</dt><dd>CadQuery · MuJoCo · 3D printing · ESP32 · IR line sensors</dd></div>
+      <div><dt class="label">Key figure</dt><dd>Working autonomous line following</dd></div>
     </dl>
 
     <figure class="case-hero"><img class="" src="../images/gripper-robot.jpg" alt="The team's robot car with its black 3D-printed gripper and lift on the competition field, next to two pipes"><figcaption class="label">Our robot on the competition field</figcaption></figure>
 
     <article class="case-body">
       <h2>Overview</h2>
-      <p>Red Robot is a three-day hardware hackathon run by the CMU Robotics Club, where teams of five turn a starter-kit robot into a competition machine with their own mechanisms, electronics and code. The game is kept secret until kickoff. Our team built a small UMI-style gripper and lift so the robot car could pick up pipes and stack them. Two hobby servos drive it, one to open and close the jaws and one to raise and lower the arm.</p>
+      <p>Red Robot is a three-day hardware hackathon run by the CMU Robotics Club, where teams of five turn a starter-kit robot into a competition machine with their own mechanisms, electronics and code. The game is kept secret until kickoff. Our team got the robot driving itself along the field's tape lines in the autonomous period, something many teams couldn't manage, and built a small UMI-style gripper and lift so it could pick up pipes and stack them. Two hobby servos drive it, one to open and close the jaws and one to raise and lower the arm.</p>
       <figure class="pair pair plot">
         <div><img src="../images/gripper-low.jpg" alt="CAD render of the lift at its lowest position holding a pipe" loading="lazy"><img src="../images/gripper-high.jpg" alt="CAD render of the lift raised to its highest position" loading="lazy"></div>
         <figcaption class="label">Fig. 1 · CAD of the gripper and lift on the car. Left: lowest position, with the fingers between the pipe's flanges · Right: highest position, with the pipe centre 130 mm up, high enough to stack</figcaption>
@@ -52,29 +52,29 @@
         <div><img src="../images/gripper-field.jpg" alt="Competition field with taped zones, black guide lines, pipes and several robot cars" loading="lazy"></div>
         <figcaption class="label">Fig. 2 · A match in progress: pipes, the trench walls and the black tape lines used for autonomous navigation</figcaption>
       </figure>
+      <h2>Autonomous line following</h2>
+      <p>Every match opens with 20 seconds where the robot has to drive itself, and many teams never got this part working. Ours did. We used a Pololu QTR-8 array, a row of eight IR reflectance sensors, to follow the black tape lines on the field. The lines run from the starting zone to each team's button zone and the trench, and following them earns autonomous bonus points, so a working routine scored points that many robots left on the table.</p>
+      <figure class="photo">
+        <div><img src="../images/gripper-qtr8.jpg" alt="Red Pololu QTR-8 sensor board with a row of header pins" loading="lazy"></div>
+        <figcaption class="label">Fig. 3 · The Pololu QTR-8 reflectance sensor array: eight IR emitter and sensor pairs that read the black tape</figcaption>
+      </figure>
       <h2>Gripper and lift</h2>
       <p>Two V-shaped jaws ride on dovetail slides and are driven together by a 12-tooth gear on the servo, opening from 27.7 to 137 mm with an end stop so they can't run off their slides. The jaw tips have a round nose so the pipe slides into the V instead of catching. The lift is a parallelogram linkage with 65 mm links, so the gripper stays level while it rises 92 mm over 90° of servo rotation.</p>
       <figure class="pair pair plot">
         <div><img src="../images/gripper-drive.jpg" alt="Exploded view of the gripper servo, horn, adapter and gear" loading="lazy"><img src="../images/gripper-lift.jpg" alt="Close-up of the lift linkage connection to the servo" loading="lazy"></div>
-        <figcaption class="label">Fig. 3 · Left: exploded gripper drive, from servo and horn through the adapter to the 12-tooth gear · Right: lower link clamped in the lift servo's horn</figcaption>
+        <figcaption class="label">Fig. 4 · Left: exploded gripper drive, from servo and horn through the adapter to the 12-tooth gear · Right: lower link clamped in the lift servo's horn</figcaption>
       </figure>
       <h2>Keeping the car upright</h2>
       <p>With the gripper reaching well ahead of the front caster, the car tipped forward easily, and the top plate could lift off its tabs. A rear ballast box and two plate pillars fix both, bolting through existing holes. A tipping estimate showed that about 150 g of ballast raises the braking needed to tip the car with a 50 g pipe from 0.21 g to 0.47 g.</p>
       <figure class="plot">
         <div><img src="../images/gripper-ballast.jpg" alt="Robot car with the top plate hidden, showing the green ballast box and side pillars" loading="lazy"></div>
-        <figcaption class="label">Fig. 4 · Car add-ons with the top plate hidden: ballast box at the rear and a pillar on each side</figcaption>
+        <figcaption class="label">Fig. 5 · Car add-ons with the top plate hidden: ballast box at the rear and a pillar on each side</figcaption>
       </figure>
       <h2>Simulation</h2>
       <p>The CAD is fully parametric in CadQuery, with an interference sweep over jaw gaps and lift angles. A MuJoCo model built from the same CAD accepts the same command packets as the car's ESP32 board. In the stacking demo the car drives while the arm moves, cancelling the forward swing of the linkage so the pipe goes almost straight up and down, and it lands 0.2 mm off centre.</p>
       <figure class="plot">
         <div><img src="../images/gripper-stack-sim.jpg" alt="Four simulation frames of the car picking up one pipe and stacking it on another" loading="lazy"></div>
-        <figcaption class="label">Fig. 5 · MuJoCo stacking demo: grip, lift, drive over the second pipe, lower and release</figcaption>
-      </figure>
-      <h2>Autonomous line following</h2>
-      <p>For the 20-second autonomous period we used a Pololu QTR-8 array, a row of eight IR reflectance sensors, to follow the black tape lines on the field. The lines run from the starting zone to each team's button zone and the trench, and following them earns autonomous bonus points.</p>
-      <figure class="photo">
-        <div><img src="../images/gripper-qtr8.jpg" alt="Red Pololu QTR-8 sensor board with a row of header pins" loading="lazy"></div>
-        <figcaption class="label">Fig. 6 · The Pololu QTR-8 reflectance sensor array: eight IR emitter and sensor pairs that read the black tape</figcaption>
+        <figcaption class="label">Fig. 6 · MuJoCo stacking demo: grip, lift, drive over the second pipe, lower and release</figcaption>
       </figure>
     </article>
 
